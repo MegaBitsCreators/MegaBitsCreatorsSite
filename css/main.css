@@ -1,0 +1,149 @@
+.logo-box {
+    width: 9%;
+}
+.company-name a 
+{
+    font-weight: 800;
+}
+.content .text {
+    color: black !important;
+}
+.content .title {
+    color: white;
+}
+
+.fe
+.core-value {
+    display: flex;
+    padding: 30px 18px;
+}
+.core-value {
+    display: flex;
+    padding: 30px 18px;
+    background: #f3f3f3;
+    margin-top: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+.core-value p 
+{
+    margin-bottom: 0px;
+}
+.red-bg {
+    background: #dc3545;
+    padding: 80px 0px !important;
+}
+.inner-service-box .core-value {
+    background-color: #dc3545;
+    transition: 0.5s;
+    justify-content: left;
+    padding: 9px 9px;
+    border-radius: 5px;
+}
+.inner-service-box .core-value h4
+{
+    color: white;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.inner-service-box .core-value:hover
+{
+    background-color: black;
+    transition: 0.5s;
+}
+.footer-widget .logo {
+    width: 74%;
+}
+.space 
+{
+    padding-bottom: 60px;;
+}
+.accordion-button {
+    padding: 7px 15px;
+    background: #dc3545;
+    color: white;
+}
+.accordion-item {
+    border: none;
+    margin-top: 6px;
+}
+.accordion-button:not(.collapsed) {
+    background: #6c0a08;
+    color: white;
+}
+.accordion-button::after 
+{
+    background-image: url(../images/down.png);
+}
+.accordion-button:not(.collapsed)::after 
+{
+    /* background-image: url(../images/up.png); */
+    background-image: none;
+}
+.accordion-button:focus 
+{
+    border-color: inherit;
+    box-shadow: inherit;
+}
+.pt-f 
+{
+    padding-top: 40px !important;
+}
+.inner-box h5 {
+    color: black !important;
+}
+.social-icon-two li a img {
+    width: 60%;
+}.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: #fff;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    border-left: 2em solid brown;
+}
+.mobile-header 
+{
+    display:none !important;
+}
+@media (max-width:768px) 
+{
+    .logo-box a img {
+        width: 40% !important;
+    }
+    .logo-box 
+    {
+        width: 100%;
+    }
+    .footer-widget .logo {
+        width: 44%;
+        margin: auto;
+    }
+    .main-footer 
+    {
+        text-align: center;
+    }
+    .social-icon-two 
+    {
+        justify-content: center;
+    }
+    .pt-f 
+    {
+        padding-top: -0px !important;
+    }
+    .desktop-header
+    {
+        display:none;
+    }
+    .mobile-header 
+    {
+        display:block
+    }
+    .service-sidebar 
+    {
+        display:none;
+    }
+    .about-section-two {
+        position: relative;
+        padding: 50px 0 70px;
+    }
+}
