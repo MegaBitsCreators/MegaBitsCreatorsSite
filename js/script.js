@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		accordionHead.nextSibling.nextSibling.classList.add('show')
 	}
 });
-let discHook = 'https://discord.com/api/webhooks/1086571697559310367/CX7rOeuQUoLxpSd-fRMxx9axs8HhZ8UbbHkJsmha_HjdksV53m5s_QzcO-__981N8fjr'
 function FormSubmit() {
 	let formInfo = new FormData(contact_form)
 	let abc = '';
@@ -32,7 +31,8 @@ function FormSubmit() {
 			'Content-Type': 'application/json',
 		}
 	};
-	fetch(discHook, requestOptions)
+	let form = document.getElementById('contact_form');
+	fetch(form.action, requestOptions)
 		.then(response => response.text())
 		.then(result => console.log(result))
 		.catch(error => console.log('error', error));
