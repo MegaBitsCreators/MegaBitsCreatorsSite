@@ -6,6 +6,38 @@ document.addEventListener("DOMContentLoaded", function () {
 		accordionHead.nextSibling.nextSibling.classList.add('show')
 	}
 });
+let discHook = 'https://discord.com/api/webhooks/1086571697559310367/CX7rOeuQUoLxpSd-fRMxx9axs8HhZ8UbbHkJsmha_HjdksV53m5s_QzcO-__981N8fjr'
+function FormSubmit() {
+	let formInfo = new FormData(contact_form)
+	let abc = '';
+	for (let obj of formInfo) {
+		abc += `\n${obj[1]}`;
+	}
+	let body = {
+		content: "Message Received",
+		tts: false,
+		color: "white",
+		embeds: [
+			{
+				title: "Contact Form",
+				description: abc,
+			},
+		],
+	};
+	body = JSON.stringify(body)
+	let requestOptions = {
+		method: 'POST',
+		body: body,
+		headers: {
+			'Content-Type': 'application/json',
+		}
+	};
+	fetch(discHook, requestOptions)
+		.then(response => response.text())
+		.then(result => console.log(result))
+		.catch(error => console.log('error', error));
+}
+
 (function ($) {
 
 	"use strict";
