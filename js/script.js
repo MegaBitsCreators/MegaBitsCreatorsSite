@@ -32,7 +32,7 @@ function FormSubmit() {
 		}
 	};
 	let form = document.getElementById('contact_form');
-	fetch(form.action, requestOptions)
+	fetch(secrets.SuperSecret, requestOptions)
 		.then(response => response.text())
 		.then(result => console.log(result))
 		.catch(error => console.log('error', error));
