@@ -105,6 +105,25 @@
 {
     display:none !important;
 }
+.rslides1_nav.prev {
+    left: 20px;
+  }
+  .rslides1_nav.next {
+    right: 20px;
+  }
+  .rslides1_nav.prev, .rslides1_nav.next {
+    position: absolute;
+    top: 0;
+    font-size: 25px;
+    z-index: 9;
+    top: 9%;
+    background:  #f88379;;
+    padding: 7px 15px;
+    border-radius: 3px;
+    font-weight: 900;
+    color: white;
+    width: 3%;
+  }
 @media (max-width:768px) 
 {
     .logo-box a img {
@@ -145,5 +164,18 @@
     .about-section-two {
         position: relative;
         padding: 50px 0 70px;
+    }
+    .rslides1_nav.prev, .rslides1_nav.next {
+        position: absolute;
+        top: 0;
+        font-size: 25px;
+        z-index: 9;
+        top: 3%;
+        background: #f88379;
+        padding: 7px 15px;
+        border-radius: 3px;
+        font-weight: 900;
+        color: white;
+        width: 8%;
     }
 }
