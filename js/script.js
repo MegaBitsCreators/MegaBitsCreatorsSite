@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 const form = document.forms['contact_form']
 function formSubmit() {
-	let scriptURL = "https://script.google.com/macros/s/AKfycbwV4ol5q3ie3z5moE8M1ADa5CKVKls43nRBqQLGq9TOgZWBTQWMgcM-Czs8XrjdglXm/exec";
-	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+	let scriptURL = "https://script.google.com/macros/s/AKfycbz6DpCdgykCM9AyalV22UvLJOHoUGXnd0L9ugBllxkFSZvbqmwj5g44sneKdaE4YKGC6g/exec";
+	fetch(scriptURL, {
+		method: 'POST', body: new FormData(form)
+	})
 		.then(response => {
 			$(form).trigger("reset");
 		})
