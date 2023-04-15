@@ -6,36 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		accordionHead.nextSibling.nextSibling.classList.add('show')
 	}
 });
-function FormSubmit() {
-	let formInfo = new FormData(contact_form)
-	let abc = '';
-	for (let obj of formInfo) {
-		abc += `\n${obj[1]}`;
-	}
-	let body = {
-		content: "Message Received",
-		tts: false,
-		color: "white",
-		embeds: [
-			{
-				title: "Contact Form",
-				description: abc,
-			},
-		],
-	};
-	body = JSON.stringify(body)
-	let requestOptions = {
-		method: 'POST',
-		body: body,
-		headers: {
-			'Content-Type': 'application/json',
-		}
-	};
-	let form = document.getElementById('contact_form');
-	fetch(secrets.SuperSecret, requestOptions)
-		.then(response => response.text())
-		.then(result => console.log(result))
-		.catch(error => console.log('error', error));
+const form = document.forms['contact_form']
+function formSubmit() {
+	let scriptURL = "https://script.google.com/macros/s/AKfycbwV4ol5q3ie3z5moE8M1ADa5CKVKls43nRBqQLGq9TOgZWBTQWMgcM-Czs8XrjdglXm/exec";
+	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+		.then(response => {
+			$(form).trigger("reset");
+		})
+		.catch(error => console.error('Error!', error.message))
+
 }
 
 (function ($) {

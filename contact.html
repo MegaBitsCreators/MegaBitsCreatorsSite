@@ -242,36 +242,33 @@
           </div>
           <div class="col-lg-8">
             <!-- Contact Form -->
-            <form id="contact_form" name="contact_form" class="" onsubmit="event.preventDefault(); FormSubmit();"
-              method="post">
+            <form id="contact_form" name="contact_form" class="" onsubmit="event.preventDefault();formSubmit()">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="mb-3">
-                    <input name="form_name" class="form-control" type="text" placeholder="Enter Name" />
+                    <input name="Name" class="form-control" type="text" placeholder="Enter Name" />
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="mb-3">
-                    <input name="form_email" class="form-control required email" type="email"
-                      placeholder="Enter Email" />
+                    <input name="Email" class="form-control required email" type="email" placeholder="Enter Email" />
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
                   <div class="mb-3">
-                    <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject" />
+                    <input name="Subject" class="form-control required" type="text" placeholder="Enter Subject" />
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="mb-3">
-                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone" />
+                    <input name="Phone" class="form-control" type="text" placeholder="Enter Phone" />
                   </div>
                 </div>
               </div>
               <div class="mb-3">
-                <textarea name="form_message" class="form-control required" rows="5"
-                  placeholder="Enter Message"></textarea>
+                <textarea name="Message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
               </div>
               <div class="mb-3 text-center">
                 <input name="form_botcheck" class="form-control" type="hidden" value="" />
